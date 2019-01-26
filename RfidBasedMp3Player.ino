@@ -30,7 +30,7 @@ RFID rfid(SS_PIN, RST_PIN);
   uint16_t musicid;
 } RFID_TABLE;
 
-//Add id of Rfid cards inside table. "Debug 1", You can see from the serial screen.
+//Add id of Rfid cards inside table. 
 static const RFID_TABLE PROGMEM table[] = 
 {
   //serNum0  serNum1   serNum2    serNum3    serNum4  musicid
