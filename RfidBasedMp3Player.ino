@@ -15,9 +15,8 @@
 #define SS_PIN 10 //SDA_PIN also
 #define RST_PIN 9
 
-//when you set , you can see your id of rfid cards.
-//Don't forget to do 0 while dfplayer mini is running
-#define DEBUG 0
+
+
 RFID rfid(SS_PIN, RST_PIN); 
 
 
@@ -58,7 +57,7 @@ void loop()
 {
     if (rfid.isCard()) {
        if (rfid.readCardSerial()) {
-               #if DEBUG
+               /*
                 Serial.print("Cardnumber:");
                 Serial.print(rfid.serNum[0],DEC);
                 Serial.print(", ");
@@ -70,7 +69,7 @@ void loop()
                 Serial.print(", ");
                 Serial.print(rfid.serNum[4],DEC);
                 Serial.println(" ");       */
-                #endif
+                
            }     
      for (unsigned i=0; i<sizeof(table)/sizeof(table[0]); ++i)
   {
